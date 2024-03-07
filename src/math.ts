@@ -5,3 +5,9 @@ export function add(x: number, y: number): number {
 export function multiply(x: number, y: number): number {
     return x * y;
 }
+
+export class Example {
+    public add(x: number, y: number): number {
+        return add(x, y);
+    }
+}
