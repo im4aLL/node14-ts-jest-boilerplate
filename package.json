@@ -3,11 +3,9 @@
     "version": "1.0.0",
     "description": "Node14 typescript boilerplate",
     "main": "main.js",
-    "engines": {
-        "node": "14.17.5"
-    },
     "scripts": {
-        "test": "jest",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch",
         "build": "rimraf dist && tsc",
         "start": "tsc && node dist/main.js",
         "start:dev": "./node_modules/nodemon/bin/nodemon.js",
