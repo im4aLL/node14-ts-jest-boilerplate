@@ -7,9 +7,8 @@
         "test": "jest --coverage",
         "test:watch": "jest --watch",
         "build": "rimraf dist && tsc",
-        "start": "tsc && node dist/main.js",
-        "start:dev": "./node_modules/nodemon/bin/nodemon.js",
-        "start:nodemon": "ts-node ./src/main.ts"
+        "start": "npm run build && env-cmd -f .env.prod node dist/main.js",
+        "start:dev": "nodemon"
     },
     "author": "",
     "license": "ISC",
@@ -22,6 +21,7 @@
         "@types/node": "^20.11.25",
         "@typescript-eslint/eslint-plugin": "^7.1.1",
         "@typescript-eslint/parser": "^7.1.1",
+        "env-cmd": "^10.1.0",
         "eslint": "^8.57.0",
         "eslint-config-prettier": "^9.1.0",
         "eslint-plugin-prettier": "^5.1.3",

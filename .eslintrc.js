@@ -17,6 +17,7 @@ module.exports = {
     },
     ignorePatterns: [
         ".eslintrc.js",
+        "*.config.js",
         "node_modules/",
         "dist/",
         "data/",
